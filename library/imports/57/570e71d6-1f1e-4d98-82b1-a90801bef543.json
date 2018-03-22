@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hollow",
+    "texture": "211a4a6e-bb2a-4593-8fd1-a11356895e2b",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      237,
+      69
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      237,
+      69
+    ]
+  }
+}

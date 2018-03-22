@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "scorenum",
+    "texture": "9131a370-df4f-4da5-bab9-4c6f4ccf0aea",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      514,
+      80
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      514,
+      80
+    ]
+  }
+}
