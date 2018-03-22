@@ -293,6 +293,7 @@ cc.Class({
         this.spawnRim(this.rimPositionArr[this.count]);
         this.rims.forEach(function (rim, index) {
             if (rim.bottomRimNode == bottomRim.node) {
+                rim.topRimNode.removeComponent(cc.PhysicsBoxCollider);
                 rim.topRimNode.runAction(cc.sequence(cc.fadeOut(0.5), cc.callFunc(function () {
                     rim.topRimNode.destroy();
                 })));

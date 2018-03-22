@@ -26,7 +26,6 @@ cc.Class({
         if (this.game.getComponent("Game").status == 1) {
             var ballSpeed = this.ball.getComponent(cc.RigidBody).linearVelocity; //篮球的速度对象
             var ballSpeedX = ballSpeed.x; //篮球的x轴速度
-            console.log(ballSpeedX);
             var ballPositionX = this.game.getComponent("Game").ballInit.x; //篮球的原x位置
             this.ball.node.x = ballPositionX; //设置篮球始终在原位置
             this.backgroundMove(dt, ballSpeedX); //移动背景
@@ -44,7 +43,6 @@ cc.Class({
         if (ballSpeedX == 0) {
             if (this.speed > this.initSpeed) {
                 this.speed -= 500 * dt;
-                console.log("this.speed" + this.speed);
             }
             this.node.x += this.speed * dt;
         } else {

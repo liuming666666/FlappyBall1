@@ -65,8 +65,8 @@
     "relativePath": "Texture\\HelloWorld.png"
   },
   "c96f6b06-c11a-419f-a425-b7f1ac1007b3": {
-    "asset": 1521710556091,
-    "meta": 1521710556097,
+    "asset": 1521712676695,
+    "meta": 1521712676706,
     "relativePath": "Scene\\Game.fire"
   },
   "fa31ce44-badb-4e49-9884-9b129ab8c9b2": {
@@ -95,8 +95,8 @@
     "relativePath": "Texture\\k2.png"
   },
   "f282dc63-0a1f-48d0-b511-2c2f0f0bdcc5": {
-    "asset": 1521539825608,
-    "meta": 1521539825620,
+    "asset": 1521712789974,
+    "meta": 1521712789990,
     "relativePath": "Prefabs\\k1.prefab"
   },
   "48ee122f-a30a-490f-9d71-2ae0808ead58": {
@@ -379,19 +379,19 @@
     "meta": 1521688063482,
     "relativePath": "Texture\\startgame.png"
   },
-  "280c3aec-6492-4a9d-9f51-a9b00b570b4a": {
-    "asset": 1521709731193,
-    "meta": 1521709793603,
-    "relativePath": "Script\\Game.js"
-  },
-  "36989cbb-637f-442a-9c87-ab33664b17cf": {
-    "asset": 1521710108239,
-    "meta": 1521710141788,
-    "relativePath": "Script\\Scroll.js"
-  },
   "0dbb4bd2-db80-430a-87fb-7af4415137f0": {
     "asset": 1521710743539,
     "meta": 1521710747164,
     "relativePath": "Script\\Ball.js"
+  },
+  "36989cbb-637f-442a-9c87-ab33664b17cf": {
+    "asset": 1521712108723,
+    "meta": 1521712111967,
+    "relativePath": "Script\\Scroll.js"
+  },
+  "280c3aec-6492-4a9d-9f51-a9b00b570b4a": {
+    "asset": 1521712645347,
+    "meta": 1521712647829,
+    "relativePath": "Script\\Game.js"
   }
 }
