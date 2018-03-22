@@ -92,6 +92,8 @@ cc.Class({
                 self.rimPositionArr.push(value);
             });
         }
+        //关闭球的粒子系统
+        this.qiu.stopSystem();
     },
 
     /**
