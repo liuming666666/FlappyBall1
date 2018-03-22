@@ -17,9 +17,9 @@ var Status = cc.Enum({
 
 //随机节奏篮圈位置
 var rimPosition = {
-    simple: [{ x: 500, y: -100, r: 0 }, { x: 500, y: 100, r: 0 }, { x: 500, y: 0, r: 0 }, { x: 500, y: 200, r: 0 }, { x: 500, y: -200, r: 0 }], //简单
-    commonly: [{ x: 500, y: -200, r: -30 }, { x: 500, y: 0, r: 30 }, { x: 500, y: 200, r: -45 }, { x: 500, y: -100, r: 45 }, { x: 500, y: 100, r: 0 }], //一般
-    difficulty: [{ x: 500, y: 0, r: 45 }, { x: 500, y: -150, r: 30 }, { x: 500, y: -150, r: 15 }, { x: 500, y: 200, r: 0 }, { x: 500, y: -125, r: -30 }] //困难
+    simple: [{ x: 0, y: -100, r: 0 }, { x: 0, y: 100, r: 0 }, { x: 0, y: 0, r: 0 }, { x: 0, y: 200, r: 0 }, { x: 0, y: -200, r: 0 }], //简单
+    commonly: [{ x: 0, y: -200, r: -15 }, { x: 0, y: 0, r: 15 }, { x: 0, y: 200, r: -20 }, { x: 0, y: -100, r: 20 }, { x: 0, y: 100, r: 0 }], //一般
+    difficulty: [{ x: 0, y: 0, r: 30 }, { x: 0, y: -150, r: 30 }, { x: 0, y: -150, r: -30 }, { x: 0, y: 200, r: 0 }, { x: 0, y: -125, r: -20 }] //困难
 };
 
 cc.Class({
@@ -47,7 +47,11 @@ cc.Class({
         qiu: cc.ParticleSystem,
         //空心球分数特效节点
         hollowLabel: cc.Node,
-        startTimer: cc.Label
+        startTimer: cc.Label,
+        displayScore: cc.Label,
+        playBtn: cc.Node,
+        mask: cc.Node,
+        background: cc.Node
     },
 
     statics: {
@@ -56,11 +60,22 @@ cc.Class({
 
     // use this for initialization
     onLoad: function onLoad() {
-        this.count = 0;
-        var self = this;
-        this.rimPositionArr = [];
+        //设置轴位置
+        this.mask.setLocalZOrder(4);
+        this.playBtn.setLocalZOrder(5);
         //记录篮球初始位置
         this.ballInit = this.ball.node.getPosition();
+        //this.scheduleOnce(this.gameOver, 5);
+    },
+
+    init: function init() {
+        this.ball.getComponent(cc.RigidBody).linearVelocity = { x: 0, y: 0 };
+        /*console.log(this.background.getComponent("Scroll").initSpeed);
+        this.background.speed = this.background.getComponent("Scroll").initSpeed;
+        this.rimSpeed = this.background.getComponent("Scroll").initRimSpeed;*/
+        var self = this;
+        //初始化篮筐位置数组
+        this.rimPositionArr = [];
         //游戏状态主菜单界面
         this.status = Status.Menu;
         //分数初始化
@@ -71,27 +86,40 @@ cc.Class({
         this.topRimPool = new cc.NodePool("TopPoolHandler");
         //下篮筐池
         this.bottomRimPool = new cc.NodePool("BottomPoolHandler");
-
+        //把篮球位置全装进数组
         for (var key in rimPosition) {
             rimPosition[key].forEach(function (value, index) {
                 self.rimPositionArr.push(value);
             });
         }
-        //this.scheduleOnce(this.gameOver, 5);
     },
 
     /**
      * 开始游戏
      */
     startGame: function startGame() {
-        //修改游戏状态
-        this.status = Status.Run;
+
+        //初始化游戏参数
+        this.init();
+        this.count = 0;
+        //清除全部篮筐
+        this.rims.forEach(function (value) {
+            value.topRimNode.destroy();
+            value.bottomRimNode.destroy();
+        });
+        this.rims = [];
         this.score = 0;
-        this.scoreLabel.string = "score:" + this.score;
+        this.scoreLabel.string = this.score;
         //回归篮球位置
         this.ball.node.setPosition(this.ballInit);
         //背景开始移动，开始生成篮筐
-        this.spawnRim({ x: 200, y: 0, r: 0 });
+        for (var i = 0; i < 2; i++) {
+            this.spawnRim({ x: 200 + 400 * i, y: 0, r: 0 });
+        }
+        //修改游戏状态
+        this.status = Status.Run;
+        //隐藏遮罩层
+        this.mask.active = false;
         //添加球控制事件
         this.node.on(cc.Node.EventType.TOUCH_START, this.ball.getComponent("Ball").ballControll, this.ball);
 
@@ -103,6 +131,8 @@ cc.Class({
      * 获得分数，并修改
      */
     getScore: function getScore() {
+        var _this = this;
+
         if (this.status == Status.Run) {
             if (this.isHollow == 0) {
                 //开启粒子系统
@@ -146,10 +176,15 @@ cc.Class({
             } else {
                 this.isHollow = 0;
                 this.hollowNum = 0;
+                this.displayScore.node.active = true;
+                this.displayScore.node.runAction(cc.sequence(cc.fadeTo(1, 0), cc.callFunc(function () {
+                    _this.displayScore.node.opacity = 255;
+                    _this.displayScore.node.active = false;
+                })));
             }
             this.score++;
             //修改分数显示的值
-            this.scoreLabel.string = "score:" + this.score;
+            this.scoreLabel.string = this.score;
             //播放得分音效
             //cc.audioEngine.play(音频文件,false,1);
         }
@@ -163,18 +198,19 @@ cc.Class({
         this.status = Status.Over;
         var gameOverNode = this.GameOverPool.get();
         //取消绑定时间
-        this.node.off(cc.Node.EventType.MOUSE_DOWN, this.ball.getComponent("Ball").ballControll, this.ball);
-        if (!gameOverNode) {
+        this.node.off(cc.Node.EventType.TOUCH_START, this.ball.getComponent("Ball").ballControll, this.ball);
+        this.playBtn.active = true;
+        this.mask.active = true;
+        /*if(!gameOverNode) {
             console.log("创建了结束面板");
             //制造游戏结束预制节点
             gameOverNode = cc.instantiate(this.gameOverPref);
-
-            //把节点传给GAMEOVER
+             //把节点传给GAMEOVER
             gameOverNode.getComponent("GameOver").game = this.node;
         }
         gameOverNode.getComponent("GameOver").scoreLabel.string = "score:" + this.score;
         //把生成的GameOver节点挂到Canvas下面
-        this.node.addChild(gameOverNode, 5);
+        this.node.addChild(gameOverNode,5);*/
     },
 
     /**
@@ -182,7 +218,7 @@ cc.Class({
      */
     playBtnClick: function playBtnClick() {
         //开始按钮隐藏
-        this.node.getChildByName("PlayBtn").active = false;
+        this.playBtn.active = false;
         /*var time = 1;
         this.startTimer.string = 'Ready';
         this.startTimer.node.active = true;
@@ -223,7 +259,7 @@ cc.Class({
             topRimNode = cc.instantiate(this.topRim);
             topRimNode.addComponent('TopPoolHandler');
             topRimNode.setPosition({
-                x: position["x"],
+                x: position.x == 0 ? this.rims[this.rims.length - 1].topRimNode.x + 400 : position.x,
                 y: position.y
             });
             topRimNode.setRotation(position.r);
@@ -233,7 +269,7 @@ cc.Class({
             bottomRimNode = cc.instantiate(this.bottomRim);
             bottomRimNode.addComponent('BottomPoolHandler');
             bottomRimNode.setPosition({
-                x: position.x,
+                x: position.x == 0 ? this.rims[this.rims.length - 1].bottomRimNode.x + 400 : position.x,
                 y: position.y
             });
             bottomRimNode.setRotation(position.r);
@@ -252,7 +288,7 @@ cc.Class({
      * 移除篮筐
      */
     removeRim: function removeRim(bottomRim) {
-        var _this = this;
+        var _this2 = this;
 
         this.spawnRim(this.rimPositionArr[this.count]);
         this.rims.forEach(function (rim, index) {
@@ -265,7 +301,7 @@ cc.Class({
                 })));
                 //this.topRimPool.put(value.topRimNode);
                 //this.bottomRimPool.put(value.bottomRimNode);
-                _this.rims.splice(0, 1);
+                _this2.rims.splice(0, 1);
                 return true;
             }
         });

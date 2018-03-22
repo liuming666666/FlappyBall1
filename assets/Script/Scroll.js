@@ -10,7 +10,7 @@ cc.Class({
         game: cc.Node
     },
 
-    onload: function() {
+    onLoad: function() {
         this.initSpeed = this.speed;    //背景移动初始值
         this.initRimSpeed = this.game.getComponent("Game").rimSpeed;    //篮筐移动初始值
     },
@@ -36,11 +36,15 @@ cc.Class({
             this.node.x -= this.resetX;
         }
         if(ballSpeedX == 0) {
+            if(this.speed > this.initSpeed) {
+                this.speed -= 500*dt;
+                console.log("this.speed"+this.speed);
+            }
             this.node.x += this.speed*dt;
         }else{
-            if(Math.abs(ballSpeedX) < 50) {
-                //this.speed = 0;
-                this.ball.getComponent(cc.RigidBody).linearVelocity = {x:0,y:this.ball.getComponent(cc.RigidBody).linearVelocity.y};
+            if(Math.abs(ballSpeedX) < 20) {
+                this.speed = 0;     //设置背景的速度为零
+                //this.ball.getComponent(cc.RigidBody).linearVelocity = {x:0,y:this.ball.getComponent(cc.RigidBody).linearVelocity.y};
             }
             var ballX = ballSpeedX*dt;
             if(-20 < ballSpeedX*dt < 0) {
@@ -58,11 +62,15 @@ cc.Class({
         var rimSpeed = this.game.getComponent("Game").rimSpeed;
         this.game.getComponent("Game").rims.forEach((rim,index) => {
             if(ballSpeedX == 0) {
+                if(rimSpeed > this.initRimSpeed) {
+                    this.game.getComponent("Game").rimSpeed -= 500*dt;
+                }
                 rim.topRimNode.x += rimSpeed*dt;
                 rim.bottomRimNode.x += rimSpeed*dt;
             }else{
-                if(Math.abs(ballSpeedX) < 50) {
-                    //this.speed = 0;
+                //衰减篮球速度
+                if(Math.abs(ballSpeedX) < 20) {
+                    this.game.getComponent("Game").rimSpeed=0;  //设置篮筐移动速度为零
                     this.ball.getComponent(cc.RigidBody).linearVelocity = {x:0,y:this.ball.getComponent(cc.RigidBody).linearVelocity.y};
                 }
                 var ballX = ballSpeedX*dt;

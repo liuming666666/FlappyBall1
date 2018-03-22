@@ -16,7 +16,7 @@ cc.Class({
      */
     ballControll: function() {
         //移动篮球
-        this.applyLinearImpulse(cc.v2(0,5500),this.getWorldCenter(),true);
+        this.applyLinearImpulse(cc.v2(0,6000),this.getWorldCenter(),true);
     }
 
 });

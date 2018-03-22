@@ -65,8 +65,8 @@
     "relativePath": "Texture\\HelloWorld.png"
   },
   "c96f6b06-c11a-419f-a425-b7f1ac1007b3": {
-    "asset": 1521684858757,
-    "meta": 1521684858767,
+    "asset": 1521710556091,
+    "meta": 1521710556097,
     "relativePath": "Scene\\Game.fire"
   },
   "fa31ce44-badb-4e49-9884-9b129ab8c9b2": {
@@ -124,11 +124,6 @@
     "meta": 1521529135189,
     "relativePath": "Texture\\qiuhuo.plist"
   },
-  "f9f9c902-8737-40dc-aafd-d98d73ef1965": {
-    "asset": 1521529402611,
-    "meta": 1521529415228,
-    "relativePath": "Texture\\bg .png"
-  },
   "acd2ffbf-502d-4ca6-9cf9-1bf35840f9c2": {
     "asset": 1521529611956,
     "meta": 1521529613114,
@@ -179,11 +174,6 @@
     "meta": 1521613387011,
     "relativePath": "Script\\HollowAnim.js"
   },
-  "0dbb4bd2-db80-430a-87fb-7af4415137f0": {
-    "asset": 1521613406946,
-    "meta": 1521613409568,
-    "relativePath": "Script\\Ball.js"
-  },
   "aadff21e-2485-4dc0-bd5a-d1465b94be67": {
     "asset": 1521614898106,
     "meta": 1521614898793,
@@ -193,16 +183,6 @@
     "asset": 1521624717594,
     "meta": 1521624719988,
     "relativePath": "Script\\CheckGoal.js"
-  },
-  "36989cbb-637f-442a-9c87-ab33664b17cf": {
-    "asset": 1521627275506,
-    "meta": 1521627278889,
-    "relativePath": "Script\\Scroll.js"
-  },
-  "280c3aec-6492-4a9d-9f51-a9b00b570b4a": {
-    "asset": 1521634579028,
-    "meta": 1521634588372,
-    "relativePath": "Script\\Game.js"
   },
   "e851e89b-faa2-4484-bea6-5c01dd9f06e2": {
     "asset": 1515662864000,
@@ -388,5 +368,30 @@
     "asset": 1515662864000,
     "meta": 1521634731038,
     "relativePath": "prefab\\webview.prefab"
+  },
+  "70ae3e1f-07b4-442d-83c5-e6e1f8b4a32a": {
+    "asset": 1521687854831,
+    "meta": 1521687863233,
+    "relativePath": "Texture\\bg .png"
+  },
+  "c904b984-1968-4b0b-9817-984a975f4d1f": {
+    "asset": 1521688063464,
+    "meta": 1521688063482,
+    "relativePath": "Texture\\startgame.png"
+  },
+  "280c3aec-6492-4a9d-9f51-a9b00b570b4a": {
+    "asset": 1521709731193,
+    "meta": 1521709793603,
+    "relativePath": "Script\\Game.js"
+  },
+  "36989cbb-637f-442a-9c87-ab33664b17cf": {
+    "asset": 1521710108239,
+    "meta": 1521710141788,
+    "relativePath": "Script\\Scroll.js"
+  },
+  "0dbb4bd2-db80-430a-87fb-7af4415137f0": {
+    "asset": 1521710743539,
+    "meta": 1521710747164,
+    "relativePath": "Script\\Ball.js"
   }
 }

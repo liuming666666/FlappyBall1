@@ -100,7 +100,7 @@
         "timeline"
       ]
     },
-    "window-1521684862582": {},
+    "window-1521686519904": {},
     "worker": {}
   },
   "panels": {
@@ -115,6 +115,12 @@
       "y": 61,
       "width": 516,
       "height": 738
+    },
+    "sprite-editor": {
+      "x": 702,
+      "y": 241,
+      "width": 516,
+      "height": 538
     }
   }
 }
