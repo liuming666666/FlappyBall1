@@ -522,7 +522,7 @@
     "_density": 1,
     "_sensor": false,
     "_friction": 0.2,
-    "_restitution": 0,
+    "_restitution": 0.8,
     "body": null,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -692,7 +692,7 @@
     "_enabled": true,
     "_type": 0,
     "_allowSleep": true,
-    "_gravityScale": 5,
+    "_gravityScale": 1,
     "_linearDamping": 2,
     "_angularDamping": 0,
     "_linearVelocity": {
@@ -948,17 +948,17 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 2,
+    "_density": 1,
     "_sensor": false,
-    "_friction": 0.2,
-    "_restitution": 0.2,
+    "_friction": 0,
+    "_restitution": 0,
     "body": null,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 0
     },
-    "_radius": 37
+    "_radius": 34
   },
   {
     "__type__": "0dbb4vS24BDCof7evRBUTfw",
@@ -1005,7 +1005,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 76.74,
+      "width": 66.74,
       "height": 120
     },
     "_rotationX": 0,
@@ -1061,7 +1061,7 @@
       "b": 255,
       "a": 255
     },
-    "_width": 5
+    "_width": 2
   },
   {
     "__type__": "cc.Node",

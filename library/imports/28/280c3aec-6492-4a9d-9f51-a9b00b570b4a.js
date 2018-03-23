@@ -100,7 +100,6 @@ cc.Class({
      * 开始游戏
      */
     startGame: function startGame() {
-
         //初始化游戏参数
         this.init();
         this.count = 0;
@@ -295,7 +294,7 @@ cc.Class({
         this.spawnRim(this.rimPositionArr[this.count]);
         this.rims.forEach(function (rim, index) {
             if (rim.bottomRimNode == bottomRim.node) {
-                rim.topRimNode.removeComponent(cc.PhysicsBoxCollider);
+                rim.topRimNode.removeComponent(cc.RigidBody);
                 rim.topRimNode.runAction(cc.sequence(cc.fadeOut(0.5), cc.callFunc(function () {
                     rim.topRimNode.destroy();
                 })));

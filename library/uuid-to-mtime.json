@@ -65,8 +65,8 @@
     "relativePath": "Texture\\HelloWorld.png"
   },
   "c96f6b06-c11a-419f-a425-b7f1ac1007b3": {
-    "asset": 1521712676695,
-    "meta": 1521712676706,
+    "asset": 1521798567638,
+    "meta": 1521798567652,
     "relativePath": "Scene\\Game.fire"
   },
   "fa31ce44-badb-4e49-9884-9b129ab8c9b2": {
@@ -95,8 +95,8 @@
     "relativePath": "Texture\\k2.png"
   },
   "f282dc63-0a1f-48d0-b511-2c2f0f0bdcc5": {
-    "asset": 1521712789974,
-    "meta": 1521712789990,
+    "asset": 1521798566303,
+    "meta": 1521798566321,
     "relativePath": "Prefabs\\k1.prefab"
   },
   "48ee122f-a30a-490f-9d71-2ae0808ead58": {
@@ -123,11 +123,6 @@
     "asset": 1521529135186,
     "meta": 1521529135189,
     "relativePath": "Texture\\qiuhuo.plist"
-  },
-  "acd2ffbf-502d-4ca6-9cf9-1bf35840f9c2": {
-    "asset": 1521529611956,
-    "meta": 1521529613114,
-    "relativePath": "Script\\Global.js"
   },
   "c2d3fe2b-e833-4814-9450-c18fb0330901": {
     "asset": 1521535866743,
@@ -178,11 +173,6 @@
     "asset": 1521614898106,
     "meta": 1521614898793,
     "relativePath": "Script\\BottomPoolHandler.js"
-  },
-  "409fa0e4-88c2-4587-822b-706b9ae4ed85": {
-    "asset": 1521624717594,
-    "meta": 1521624719988,
-    "relativePath": "Script\\CheckGoal.js"
   },
   "e851e89b-faa2-4484-bea6-5c01dd9f06e2": {
     "asset": 1515662864000,
@@ -380,18 +370,28 @@
     "relativePath": "Texture\\startgame.png"
   },
   "0dbb4bd2-db80-430a-87fb-7af4415137f0": {
-    "asset": 1521710743539,
-    "meta": 1521710747164,
+    "asset": 1521775906024,
+    "meta": 1521775908619,
     "relativePath": "Script\\Ball.js"
   },
   "36989cbb-637f-442a-9c87-ab33664b17cf": {
-    "asset": 1521712108723,
-    "meta": 1521712111967,
+    "asset": 1521797227089,
+    "meta": 1521797231302,
     "relativePath": "Script\\Scroll.js"
   },
+  "409fa0e4-88c2-4587-822b-706b9ae4ed85": {
+    "asset": 1521797363666,
+    "meta": 1521797384282,
+    "relativePath": "Script\\CheckGoal.js"
+  },
   "280c3aec-6492-4a9d-9f51-a9b00b570b4a": {
-    "asset": 1521713375430,
-    "meta": 1521713389313,
+    "asset": 1521798428106,
+    "meta": 1521798506644,
     "relativePath": "Script\\Game.js"
+  },
+  "acd2ffbf-502d-4ca6-9cf9-1bf35840f9c2": {
+    "asset": 1521798716009,
+    "meta": 1521798717798,
+    "relativePath": "Script\\Global.js"
   }
 }
