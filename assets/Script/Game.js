@@ -45,7 +45,12 @@ cc.Class({
         displayScore: cc.Label,
         playBtn: cc.Node,
         mask: cc.Node,
-        background: cc.Node
+        background: cc.Node,
+        nextRim: 0,
+        startAudio: cc.AudioClip,
+        goalAudio: cc.AudioClip,
+        hollowAudio: cc.AudioClip,
+        touchAudio: cc.AudioClip
     },
 
     statics: {
@@ -94,6 +99,7 @@ cc.Class({
      * 开始游戏
      */
     startGame: function() {
+        cc.audioEngine.play(this.startAudio,false,1);
         //初始化游戏参数
         this.init();
         this.count = 0;
@@ -109,7 +115,7 @@ cc.Class({
         this.ball.node.setPosition(this.ballInit);
         //背景开始移动，开始生成篮筐
         for(let i=0 ; i<2; i++) {
-            this.spawnRim({x:200+400*i,y:0,r:0});
+            this.spawnRim({x:200+this.nextRim*i,y:0,r:0});
         }
         //修改游戏状态
         this.status = Status.Run;
@@ -134,6 +140,8 @@ cc.Class({
                 this.rims[0].bottomRimNode.children[0].getComponent(cc.ParticleSystem).resetSystem();
                 this.hollowNum++;
                 this.score += this.hollowNum*1;
+                //播放空心得分音效
+                cc.audioEngine.play(this.hollowAudio,false,1);
                 var color;
                 switch (this.hollowNum) {
                     case 1 :
@@ -171,6 +179,8 @@ cc.Class({
                 this.isHollow = 0;
                 this.hollowNum =0;
                 this.displayScore.node.active = true;
+                //播放普通得分音效
+                cc.audioEngine.play(this.goalAudio,false,1);
                 this.displayScore.node.runAction(cc.sequence(cc.fadeTo(1,0),cc.callFunc(() => {
                         this.displayScore.node.opacity = 255;
                         this.displayScore.node.active = false;
@@ -179,8 +189,6 @@ cc.Class({
             this.score++;
             //修改分数显示的值
             this.scoreLabel.string = this.score;
-            //播放得分音效
-            //cc.audioEngine.play(音频文件,false,1);
         }
     },
 
@@ -256,7 +264,7 @@ cc.Class({
             topRimNode = cc.instantiate(this.topRim);
             topRimNode.addComponent('TopPoolHandler');
             topRimNode.setPosition({
-                x:position.x == 0 ? this.rims[this.rims.length-1].topRimNode.x+400 : position.x,
+                x:position.x == 0 ? this.rims[this.rims.length-1].topRimNode.x+this.nextRim : position.x,
                 y:position.y
             });
             topRimNode.setRotation(position.r);
@@ -266,7 +274,7 @@ cc.Class({
             bottomRimNode = cc.instantiate(this.bottomRim);
             bottomRimNode.addComponent('BottomPoolHandler');
             bottomRimNode.setPosition({
-                x:position.x == 0 ? this.rims[this.rims.length-1].bottomRimNode.x+400 : position.x,
+                x:position.x == 0 ? this.rims[this.rims.length-1].bottomRimNode.x+this.nextRim : position.x,
                 y:position.y
             });
             bottomRimNode.setRotation(position.r);
@@ -289,13 +297,22 @@ cc.Class({
         this.spawnRim(this.rimPositionArr[this.count]);
         this.rims.forEach((rim,index) => {
             if(rim.bottomRimNode == bottomRim.node) {
+                //this.rims.splice(0,1);
                 rim.topRimNode.removeComponent(cc.RigidBody);
-                rim.topRimNode.runAction(cc.sequence(cc.fadeOut(0.5),cc.callFunc(()=>{
+                rim.bottomRimNode.children[0].getComponent(cc.ParticleSystem).stopSystem();
+                rim.topRimNode.runAction(cc.spawn(cc.scaleBy(1, 1.5),cc.fadeOut(0.5)),cc.callFunc(()=>{
+                    rim.topRimNode.destroy();
+                }));
+                rim.bottomRimNode.runAction(cc.spawn(cc.scaleBy(1, 1.5),cc.fadeOut(0.5)),cc.callFunc(()=>{
+
+                    rim.bottomRimNode.destroy();
+                }));
+                /*rim.topRimNode.runAction(cc.sequence(cc.fadeOut(0.5),cc.callFunc(()=>{
                     rim.topRimNode.destroy();
                 })));
                 rim.bottomRimNode.runAction(cc.sequence(cc.fadeOut(0.5),cc.callFunc(()=>{
                     rim.bottomRimNode.destroy();
-                })));
+                })));*/
                 //this.topRimPool.put(value.topRimNode);
                 //this.bottomRimPool.put(value.bottomRimNode);
                 this.rims.splice(0,1);

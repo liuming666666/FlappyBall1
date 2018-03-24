@@ -35,10 +35,10 @@ cc.Class({
             this.node.x -= this.resetX;
         }
         //把球的位移给篮筐和背景，检测篮筐和背景的速度，快速恢复速度
-        /*if(ballSpeedX < 0 && this.speed < 0) {
+        /*if(ballSpeedX < -10) {
             //背景向右走
             this.speed = -ballSpeedX;
-        }else if(ballSpeedX >= 0 && this.speed > 0) {
+        }else if(ballSpeedX >= 10) {
             //背景向左走
             this.speed = this.speed - ballSpeedX;
         }
@@ -47,9 +47,9 @@ cc.Class({
         this.node.x -= this.speed*dt;
         //恢复背景速度
         if(this.speed > this.initSpeed) {
-            this.speed -= 100*dt;
+            this.speed -= 50*dt;
         }else if(this.speed < this.initSpeed) {
-            this.speed += 100*dt;
+            this.speed += 50*dt;
         }*/
 
         if(ballSpeedX == 0) {
@@ -77,10 +77,10 @@ cc.Class({
     rimMove: function (dt,ballSpeedX) {
         var rimSpeed = this.game.getComponent("Game").rimSpeed;
         this.game.getComponent("Game").rims.forEach((rim,index) => {
-            /*if(ballSpeedX < 0) {
+            /*if(ballSpeedX < -10) {
                 //篮筐向右走
                 rimSpeed = -ballSpeedX;
-            }else if(ballSpeedX >= 0) {
+            }else if(ballSpeedX >= 10) {
                 //篮筐向左走
                 rimSpeed += ballSpeedX;
             }
@@ -88,9 +88,9 @@ cc.Class({
             rim.bottomRimNode.x += rimSpeed*dt;
 
             if(rimSpeed > this.initRimSpeed) {
-                this.game.getComponent("Game").rimSpeed -= 100*dt;
+                this.game.getComponent("Game").rimSpeed -= 50*dt;
             }else if(rimSpeed < this.initRimSpeed) {
-                this.game.getComponent("Game").rimSpeed += 100*dt;
+                this.game.getComponent("Game").rimSpeed += 50*dt;
             }*/
 
             if(ballSpeedX == 0) {

@@ -45,12 +45,12 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1521539125242,
+    "asset": 1521803269860,
     "meta": 1521424463059,
     "relativePath": "Script"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
-    "asset": 1521529415182,
+    "asset": 1521688063469,
     "meta": 1521424463060,
     "relativePath": "Texture"
   },
@@ -65,8 +65,8 @@
     "relativePath": "Texture\\HelloWorld.png"
   },
   "c96f6b06-c11a-419f-a425-b7f1ac1007b3": {
-    "asset": 1521798567638,
-    "meta": 1521798567652,
+    "asset": 1521873696974,
+    "meta": 1521873696979,
     "relativePath": "Scene\\Game.fire"
   },
   "fa31ce44-badb-4e49-9884-9b129ab8c9b2": {
@@ -100,8 +100,8 @@
     "relativePath": "Prefabs\\k1.prefab"
   },
   "48ee122f-a30a-490f-9d71-2ae0808ead58": {
-    "asset": 1521615590080,
-    "meta": 1521615590086,
+    "asset": 1521803771532,
+    "meta": 1521803771538,
     "relativePath": "Prefabs\\k2.prefab"
   },
   "34ca71b2-64bd-43e7-b801-f8d08387ffb2": {
@@ -369,29 +369,49 @@
     "meta": 1521688063482,
     "relativePath": "Texture\\startgame.png"
   },
-  "0dbb4bd2-db80-430a-87fb-7af4415137f0": {
-    "asset": 1521775906024,
-    "meta": 1521775908619,
-    "relativePath": "Script\\Ball.js"
-  },
   "36989cbb-637f-442a-9c87-ab33664b17cf": {
-    "asset": 1521797227089,
-    "meta": 1521797231302,
+    "asset": 1521800966979,
+    "meta": 1521800970593,
     "relativePath": "Script\\Scroll.js"
   },
   "409fa0e4-88c2-4587-822b-706b9ae4ed85": {
-    "asset": 1521797363666,
-    "meta": 1521797384282,
+    "asset": 1521807141313,
+    "meta": 1521807142676,
     "relativePath": "Script\\CheckGoal.js"
   },
+  "c5068829-60ec-49a7-be6d-55c217aa886c": {
+    "asset": 1521810622600,
+    "meta": 1521810622602,
+    "relativePath": "Texture\\start.mp3"
+  },
+  "57f4cb15-1316-462c-b0ea-2f142fcfeee3": {
+    "asset": 1521810766156,
+    "meta": 1521810766158,
+    "relativePath": "Texture\\goal.mp3"
+  },
+  "60619237-fbbc-47db-8f73-d33ea073fa0f": {
+    "asset": 1521810908780,
+    "meta": 1521810908785,
+    "relativePath": "Texture\\hollow.mp3"
+  },
+  "89de4085-99c0-4078-af3f-f12ea9fc9640": {
+    "asset": 1521873347649,
+    "meta": 1521873347652,
+    "relativePath": "Texture\\touch.mp3"
+  },
   "280c3aec-6492-4a9d-9f51-a9b00b570b4a": {
-    "asset": 1521798428106,
-    "meta": 1521798506644,
+    "asset": 1521873683818,
+    "meta": 1521873687770,
     "relativePath": "Script\\Game.js"
   },
+  "0dbb4bd2-db80-430a-87fb-7af4415137f0": {
+    "asset": 1521873799128,
+    "meta": 1521873804285,
+    "relativePath": "Script\\Ball.js"
+  },
   "acd2ffbf-502d-4ca6-9cf9-1bf35840f9c2": {
-    "asset": 1521798716009,
-    "meta": 1521798717798,
+    "asset": 1521874462300,
+    "meta": 1521874467267,
     "relativePath": "Script\\Global.js"
   }
 }

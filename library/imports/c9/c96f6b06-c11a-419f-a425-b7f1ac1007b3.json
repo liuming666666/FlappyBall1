@@ -1006,7 +1006,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 66.74,
+      "width": 70.74,
       "height": 120
     },
     "_rotationX": 0,
@@ -1699,6 +1699,19 @@
     },
     "background": {
       "__id__": 3
+    },
+    "nextRim": 550,
+    "startAudio": {
+      "__uuid__": "c5068829-60ec-49a7-be6d-55c217aa886c"
+    },
+    "goalAudio": {
+      "__uuid__": "57f4cb15-1316-462c-b0ea-2f142fcfeee3"
+    },
+    "hollowAudio": {
+      "__uuid__": "60619237-fbbc-47db-8f73-d33ea073fa0f"
+    },
+    "touchAudio": {
+      "__uuid__": "89de4085-99c0-4078-af3f-f12ea9fc9640"
     }
   }
 ]
