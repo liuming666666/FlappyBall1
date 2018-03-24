@@ -21,7 +21,7 @@ cc.Class({
         cc.audioEngine.play(cc.find("Canvas").getComponent("Game").touchAudio, false, 1);
         this.getComponent(cc.RigidBody).linearVelocity = { x: this.getComponent(cc.RigidBody).linearVelocity.x, y: 0 };
         //移动篮球
-        this.applyLinearImpulse(cc.v2(0, 2500), this.getWorldCenter(), true);
+        this.applyLinearImpulse(cc.v2(0, 3500), this.getWorldCenter(), true);
     }
 
 });

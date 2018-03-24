@@ -1,210 +1,53 @@
-2018-03-23T11:08:48.934Z - normal: Load ~/.CocosCreator/settings.json
-2018-03-23T11:08:48.938Z - normal: checking language setting...
-2018-03-23T11:08:48.938Z - normal: Language: zh
-2018-03-23T11:08:50.927Z - success: protocol editor-framework registered
-2018-03-23T11:08:50.927Z - success: protocol app registered
-2018-03-23T11:08:50.927Z - success: protocol theme registered
-2018-03-23T11:08:50.928Z - success: protocol packages registered
-2018-03-23T11:08:50.928Z - success: protocol unpack registerred
-2018-03-23T11:08:50.928Z - success: protocol disable-commonjs registerred
-2018-03-23T11:08:51.192Z - normal: connected!
-2018-03-23T11:08:51.201Z - normal: Check project D:\Users\juyi1012\Documents\FlappyBall1
-2018-03-23T11:08:51.208Z - normal: Initializing Cocos2d
-2018-03-23T11:08:51.507Z - normal: Initializing Asset Database
-2018-03-23T11:08:51.540Z - success: protocol uuid registerred
-2018-03-23T11:08:51.540Z - success: protocol db registerred
-2018-03-23T11:08:51.540Z - success: protocol thumbnail registerred
-2018-03-23T11:08:51.540Z - normal: Loading editor/builtin packages
-2018-03-23T11:08:51.565Z - success: anysdk loaded
-2018-03-23T11:08:51.688Z - success: assets loaded
-2018-03-23T11:08:51.690Z - success: builder loaded
-2018-03-23T11:08:51.692Z - success: cocos-analytics loaded
-2018-03-23T11:08:51.696Z - success: console loaded
-2018-03-23T11:08:51.704Z - success: hierarchy loaded
-2018-03-23T11:08:51.707Z - success: inspector loaded
-2018-03-23T11:08:51.708Z - success: keystore loaded
-2018-03-23T11:08:51.711Z - success: node-library loaded
-2018-03-23T11:08:51.713Z - success: package-asset loaded
-2018-03-23T11:08:51.715Z - success: preferences loaded
-2018-03-23T11:08:51.716Z - success: project-exporter loaded
-2018-03-23T11:08:51.731Z - success: project-importer loaded
-2018-03-23T11:08:51.732Z - success: project-settings loaded
-2018-03-23T11:08:51.735Z - success: ui-kit loaded
-2018-03-23T11:08:51.736Z - success: ui-grid loaded
-2018-03-23T11:08:51.739Z - success: scene loaded
-2018-03-23T11:08:51.741Z - success: sprite-editor loaded
-2018-03-23T11:08:51.745Z - success: store loaded
-2018-03-23T11:08:51.749Z - success: timeline loaded
-2018-03-23T11:08:51.749Z - normal: Loading builtin packages
-2018-03-23T11:08:51.751Z - success: asset-db-debugger loaded
-2018-03-23T11:08:51.753Z - success: code-editor loaded
-2018-03-23T11:08:51.753Z - success: color-picker loaded
-2018-03-23T11:08:51.755Z - success: package-manager loaded
-2018-03-23T11:08:51.758Z - success: sdkbox loaded
-2018-03-23T11:08:51.761Z - success: tester loaded
-2018-03-23T11:08:51.763Z - success: ui-kit-preview-extra loaded
-2018-03-23T11:08:51.764Z - success: ui-kit-preview loaded
-2018-03-23T11:08:51.766Z - success: ui-tree loaded
-2018-03-23T11:08:52.887Z - normal: Initializing project D:\Users\juyi1012\Documents\FlappyBall1
-2018-03-23T11:08:52.889Z - normal: Loading packages
-2018-03-23T11:08:52.892Z - normal: Watching packages
-2018-03-23T11:08:52.901Z - normal: Run Application
-2018-03-23T11:08:53.412Z - success: preview server running at http://localhost:7456
-2018-03-23T11:08:58.143Z - normal: 1.8.1
-2018-03-23T11:16:13.547Z - error: TypeError: Cannot read property 'node' of null
-    at initializer.parent (D:\CocosCreator\resources\app.asar\node_modules\svg.js\dist\svg.js:1156:19)
-    at HTMLImageElement.img.onload (D:\CocosCreator\resources\app.asar\node_modules\svg.js\dist\svg.js:3508:22)
-2018-03-23T12:05:41.697Z - error: TypeError: Cannot read property 'node' of null
-    at initializer.parent (D:\CocosCreator\resources\app.asar\node_modules\svg.js\dist\svg.js:1156:19)
-    at HTMLImageElement.img.onload (D:\CocosCreator\resources\app.asar\node_modules\svg.js\dist\svg.js:3508:22)
-2018-03-23T12:07:45.753Z - error: TypeError: Cannot read property 'node' of null
-    at initializer.parent (D:\CocosCreator\resources\app.asar\node_modules\svg.js\dist\svg.js:1156:19)
-    at HTMLImageElement.img.onload (D:\CocosCreator\resources\app.asar\node_modules\svg.js\dist\svg.js:3508:22)
-2018-03-23T12:08:44.659Z - normal: Introduced global variable while editing: i
-2018-03-23T12:08:44.660Z - normal: Introduced global variable while editing: l
-2018-03-24T06:48:45.247Z - normal: Start building with options : {
-  "androidStudio": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "D:\\Users\\juyi1012\\Documents\\FlappyBall1\\build",
-  "debug": false,
-  "dest": "D:\\Users\\juyi1012\\Documents\\FlappyBall1\\build\\web-mobile",
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "includeAnySDK": false,
-  "includeEruda": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "renderMode": "0",
-  "scenes": [
-    "c96f6b06-c11a-419f-a425-b7f1ac1007b3"
-  ],
-  "sourceMaps": false,
-  "startScene": "c96f6b06-c11a-419f-a425-b7f1ac1007b3",
-  "template": "link",
-  "title": "wangeqiu",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "portrait",
-  "wechatgame": {
-    "appid": "",
-    "orientation": "portrait"
-  },
-  "xxteaKey": "687c09d7-f715-4c",
-  "zipCompressJs": true,
-  "project": "D:\\Users\\juyi1012\\Documents\\FlappyBall1",
-  "projectName": "wangeqiu",
-  "debugBuildWorker": false
-}
-2018-03-24T06:48:45.250Z - normal: Building D:\Users\juyi1012\Documents\FlappyBall1
-2018-03-24T06:48:45.250Z - normal: Destination D:\Users\juyi1012\Documents\FlappyBall1\build\web-mobile
-2018-03-24T06:48:45.676Z - normal: Delete D:\Users\juyi1012\Documents\FlappyBall1\build\web-mobile\**\*
-2018-03-24T06:48:47.646Z - normal: Compiled project javascript file successfully
-2018-03-24T06:48:47.647Z - normal: Start building assets
-2018-03-24T06:48:47.647Z - normal: Start spawn build-worker
-2018-03-24T06:48:48.292Z - normal: Finish spawn build-worker
-2018-03-24T06:48:48.292Z - normal: Start init build-worker
-2018-03-24T06:48:50.232Z - normal: 1.8.1
-2018-03-24T06:48:50.300Z - normal: Finish init build-worker
-2018-03-24T06:48:50.300Z - normal: Start build-assets in worker
-2018-03-24T06:48:50.603Z - normal: Finish build-assets in worker
-2018-03-24T06:48:50.606Z - normal: Finish building assets
-2018-03-24T06:48:50.621Z - normal: Start building raw assets
-2018-03-24T06:48:50.622Z - normal: Start building plugin scripts
-2018-03-24T06:48:50.640Z - normal: Finish building raw assets
-2018-03-24T06:48:50.650Z - normal: Generating main.js from D:\CocosCreator\resources\static\build-templates\shares\main.js
-2018-03-24T06:48:50.657Z - normal: Generating html from D:\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-03-24T06:48:50.671Z - normal: Built to "D:\Users\juyi1012\Documents\FlappyBall1\build\web-mobile" successfully
-2018-03-24T06:54:30.792Z - normal: Start building with options : {
-  "androidStudio": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "D:\\Users\\juyi1012\\Documents\\FlappyBall1\\build",
-  "debug": false,
-  "dest": "D:\\Users\\juyi1012\\Documents\\FlappyBall1\\build\\web-mobile",
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "includeAnySDK": false,
-  "includeEruda": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "renderMode": "0",
-  "scenes": [
-    "c96f6b06-c11a-419f-a425-b7f1ac1007b3"
-  ],
-  "sourceMaps": false,
-  "startScene": "c96f6b06-c11a-419f-a425-b7f1ac1007b3",
-  "template": "link",
-  "title": "wangeqiu",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "portrait",
-  "wechatgame": {
-    "appid": "",
-    "orientation": "portrait"
-  },
-  "xxteaKey": "687c09d7-f715-4c",
-  "zipCompressJs": true,
-  "project": "D:\\Users\\juyi1012\\Documents\\FlappyBall1",
-  "projectName": "wangeqiu",
-  "debugBuildWorker": false
-}
-2018-03-24T06:54:30.798Z - normal: Building D:\Users\juyi1012\Documents\FlappyBall1
-2018-03-24T06:54:30.799Z - normal: Destination D:\Users\juyi1012\Documents\FlappyBall1\build\web-mobile
-2018-03-24T06:54:30.801Z - normal: Delete D:\Users\juyi1012\Documents\FlappyBall1\build\web-mobile\**\*
-2018-03-24T06:54:33.123Z - normal: Compiled project javascript file successfully
-2018-03-24T06:54:33.123Z - normal: Start building assets
-2018-03-24T06:54:33.123Z - normal: Start spawn build-worker
-2018-03-24T06:54:33.772Z - normal: Finish spawn build-worker
-2018-03-24T06:54:33.772Z - normal: Start init build-worker
-2018-03-24T06:54:35.964Z - normal: 1.8.1
-2018-03-24T06:54:36.030Z - normal: Finish init build-worker
-2018-03-24T06:54:36.030Z - normal: Start build-assets in worker
-2018-03-24T06:54:36.328Z - normal: Finish build-assets in worker
-2018-03-24T06:54:36.332Z - normal: Finish building assets
-2018-03-24T06:54:36.342Z - normal: Start building raw assets
-2018-03-24T06:54:36.343Z - normal: Start building plugin scripts
-2018-03-24T06:54:36.358Z - normal: Finish building raw assets
-2018-03-24T06:54:36.364Z - normal: Generating main.js from D:\CocosCreator\resources\static\build-templates\shares\main.js
-2018-03-24T06:54:36.369Z - normal: Generating html from D:\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
-2018-03-24T06:54:36.374Z - normal: Built to "D:\Users\juyi1012\Documents\FlappyBall1\build\web-mobile" successfully
+2018-03-24T07:19:32.590Z - normal: Load ~/.CocosCreator/settings.json
+2018-03-24T07:19:32.594Z - normal: checking language setting...
+2018-03-24T07:19:32.594Z - normal: Language: zh
+2018-03-24T07:19:34.256Z - success: protocol editor-framework registered
+2018-03-24T07:19:34.256Z - success: protocol app registered
+2018-03-24T07:19:34.256Z - success: protocol theme registered
+2018-03-24T07:19:34.256Z - success: protocol packages registered
+2018-03-24T07:19:34.256Z - success: protocol unpack registerred
+2018-03-24T07:19:34.256Z - success: protocol disable-commonjs registerred
+2018-03-24T07:19:34.492Z - normal: connected!
+2018-03-24T07:19:34.495Z - normal: Check project D:\Users\juyi1012\Documents\FlappyBall1
+2018-03-24T07:19:34.498Z - normal: Initializing Cocos2d
+2018-03-24T07:19:34.708Z - normal: Initializing Asset Database
+2018-03-24T07:19:34.754Z - success: protocol uuid registerred
+2018-03-24T07:19:34.754Z - success: protocol db registerred
+2018-03-24T07:19:34.754Z - success: protocol thumbnail registerred
+2018-03-24T07:19:34.756Z - normal: Loading editor/builtin packages
+2018-03-24T07:19:34.776Z - success: anysdk loaded
+2018-03-24T07:19:34.896Z - success: assets loaded
+2018-03-24T07:19:34.897Z - success: builder loaded
+2018-03-24T07:19:34.899Z - success: cocos-analytics loaded
+2018-03-24T07:19:34.901Z - success: console loaded
+2018-03-24T07:19:34.903Z - success: hierarchy loaded
+2018-03-24T07:19:34.905Z - success: inspector loaded
+2018-03-24T07:19:34.906Z - success: keystore loaded
+2018-03-24T07:19:34.907Z - success: node-library loaded
+2018-03-24T07:19:34.909Z - success: package-asset loaded
+2018-03-24T07:19:34.911Z - success: preferences loaded
+2018-03-24T07:19:34.912Z - success: project-exporter loaded
+2018-03-24T07:19:34.925Z - success: project-importer loaded
+2018-03-24T07:19:34.926Z - success: project-settings loaded
+2018-03-24T07:19:34.927Z - success: ui-kit loaded
+2018-03-24T07:19:34.928Z - success: ui-grid loaded
+2018-03-24T07:19:34.930Z - success: scene loaded
+2018-03-24T07:19:34.931Z - success: sprite-editor loaded
+2018-03-24T07:19:34.933Z - success: store loaded
+2018-03-24T07:19:34.942Z - success: timeline loaded
+2018-03-24T07:19:34.942Z - normal: Loading builtin packages
+2018-03-24T07:19:34.943Z - success: asset-db-debugger loaded
+2018-03-24T07:19:34.944Z - success: code-editor loaded
+2018-03-24T07:19:34.944Z - success: color-picker loaded
+2018-03-24T07:19:34.945Z - success: package-manager loaded
+2018-03-24T07:19:34.948Z - success: sdkbox loaded
+2018-03-24T07:19:34.950Z - success: tester loaded
+2018-03-24T07:19:34.953Z - success: ui-kit-preview-extra loaded
+2018-03-24T07:19:34.954Z - success: ui-kit-preview loaded
+2018-03-24T07:19:34.955Z - success: ui-tree loaded
+2018-03-24T07:19:35.894Z - normal: Initializing project D:\Users\juyi1012\Documents\FlappyBall1
+2018-03-24T07:19:35.896Z - normal: Loading packages
+2018-03-24T07:19:35.899Z - normal: Watching packages
+2018-03-24T07:19:35.915Z - normal: Run Application
+2018-03-24T07:19:36.487Z - success: preview server running at http://localhost:7457
+2018-03-24T07:19:55.381Z - normal: 1.8.1

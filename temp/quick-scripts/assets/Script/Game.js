@@ -228,26 +228,6 @@ cc.Class({
     playBtnClick: function playBtnClick() {
         //开始按钮隐藏
         this.playBtn.active = false;
-        /*var time = 1;
-        this.startTimer.string = 'Ready';
-        this.startTimer.node.active = true;
-        this.startTimer.node.opacity = 255;
-        this.startTimer.node.runAction(cc.sequence(cc.scaleTo(0.2,1.5),cc.scaleTo(0.2,1),cc.fadeOut(0.6),cc.callFunc(()=>{
-            time--;
-         if(time<0){
-            this.startTimer.node.stopAllActions();
-            this.node.on(cc.Node.EventType.TOUCH_START,(event)=>{
-             }
-        );
-        }else{
-            this.startTimer.node.opacity = 255;
-            if(time==0){
-                this.startTimer.string = 'Go!';
-            }else{
-                this.startTimer.string = 'Ready';
-            }
-        }
-        })).repeatForever());*/
         this.startGame();
     },
 
@@ -302,7 +282,7 @@ cc.Class({
         this.spawnRim(this.rimPositionArr[this.count]);
         this.rims.forEach(function (rim, index) {
             if (rim.bottomRimNode == bottomRim.node) {
-                //this.rims.splice(0,1);
+                _this2.rims.splice(0, 1);
                 rim.topRimNode.removeComponent(cc.RigidBody);
                 rim.bottomRimNode.children[0].getComponent(cc.ParticleSystem).stopSystem();
                 rim.topRimNode.runAction(cc.spawn(cc.scaleBy(1, 1.5), cc.fadeOut(0.5)), cc.callFunc(function () {
@@ -320,7 +300,7 @@ cc.Class({
                 })));*/
                 //this.topRimPool.put(value.topRimNode);
                 //this.bottomRimPool.put(value.bottomRimNode);
-                _this2.rims.splice(0, 1);
+                //this.rims.splice(0,1);
                 return true;
             }
         });

@@ -673,7 +673,7 @@
       "__id__": 3
     },
     "_enabled": true,
-    "speed": -200,
+    "speed": -240,
     "resetX": -1440,
     "ball": {
       "__id__": 19
@@ -1674,7 +1674,7 @@
     "bottomRim": {
       "__uuid__": "48ee122f-a30a-490f-9d71-2ae0808ead58"
     },
-    "rimSpeed": -210,
+    "rimSpeed": -200,
     "rims": [],
     "isHollow": 0,
     "hollowNum": 0,

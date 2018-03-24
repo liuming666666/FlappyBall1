@@ -141,7 +141,7 @@
       "x": -68,
       "y": -6
     },
-    "_radius": 10
+    "_radius": 0
   },
   {
     "__type__": "cc.PhysicsCircleCollider",
@@ -162,7 +162,7 @@
       "x": 68,
       "y": -6
     },
-    "_radius": 10
+    "_radius": 0
   },
   {
     "__type__": "c4860SNY3dA45JcEoTUKJy+",
